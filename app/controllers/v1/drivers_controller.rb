@@ -14,7 +14,7 @@ module V1
     def create
       driver = Driver.new(driver_params)
       driver.save! if driver.valid?
-      render json: driver ? driver : { msg: "none" }
+      render json: driver ? driver : { message: "Invalid driver" }
     end
 
     def update
@@ -24,7 +24,7 @@ module V1
 
     def destroy
       @driver.destroy
-      render json: { msg: "Deleted" }
+      render json: { message: "Driver was deleted" }
     end
 
     protected
