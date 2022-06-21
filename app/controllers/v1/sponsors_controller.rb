@@ -14,7 +14,7 @@ module V1
     def create
       sponsor = Sponsor.new(sponsor_params)
       sponsor.save! if sponsor.valid?
-      render json: sponsor ? sponsor : { message: "Invalide Sponsor" }
+      render json: sponsor ? sponsor : { message: "Invalid Sponsor" }
     end
 
     def update

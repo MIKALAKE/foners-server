@@ -15,7 +15,7 @@ module V1
     def create
       user = User.new(user_params)
       user.save! if user.valid?
-      render json: user ? user : { message: "Invalide User" }
+      render json: user ? user : { message: "Invalid User" }
     end
 
     def update

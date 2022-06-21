@@ -14,7 +14,7 @@ module V1
     def create
       event = Event.new(event_params)
       event.save! if event.valid?
-      render json: event ? event : { message: "Invalide Event" }
+      render json: event ? event : { message: "Invalid Event" }
     end
 
     def update

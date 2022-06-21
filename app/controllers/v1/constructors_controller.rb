@@ -15,7 +15,7 @@ module V1
     def create
       constructor = Constructor.new(constructor_params)
       constructor.save! if constructor.valid?
-      render json: constructor ? constructor : { message: "Invalide Constructor" }
+      render json: constructor ? constructor : { message: "Invalid Constructor" }
     end
 
     def update

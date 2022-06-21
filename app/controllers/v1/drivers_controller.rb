@@ -14,7 +14,7 @@ module V1
     def create
       driver = Driver.new(driver_params)
       driver.save! if driver.valid?
-      render json: driver ? driver : { message: "Invalide Driver" }
+      render json: driver ? driver : { message: "Invalid Driver" }
     end
 
     def update
