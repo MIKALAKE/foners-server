@@ -1,13 +1,40 @@
 module V1
   class SponsorsController < ApiController
+    before_action :find_sponsor, only: [:show, :update, :destroy]
+
     def index
       sponsors = Sponsor.all
       render json: sponsors
     end
 
     def show
-      sponsor = Sponsor.find(params[:id])
-      render json: sponsor
+      render json: @sponsor
+    end
+
+    def create
+      sponsor = Sponsor.new(sponsor_params)
+      sponsor.save! if sponsor.valid?
+      render json: sponsor ? sponsor : { msg: "none" }
+    end
+
+    def update
+      @sponsor.update(event_params)
+      render json: @sponsor
+    end
+
+    def destroy
+      @sponsor.destroy
+      render json: { msg: "Deleted" }
+    end
+
+    protected
+
+    def sponsor_params
+      params.permit(:logo_url, :name)
+    end
+
+    def find_sponsor
+      @sponsor ||= Sponsor.find(params[:id])
     end
   end
 end

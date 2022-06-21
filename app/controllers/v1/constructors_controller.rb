@@ -1,5 +1,7 @@
 module V1
   class ConstructorsController < ApiController
+    before_action :find_constructor, only: [:show, :update, :destroy]
+
     def index
       constructors = Constructor.all
       render json: constructors
