@@ -15,7 +15,7 @@ module V1
     def create
       constructor = Constructor.new(constructor_params)
       constructor.save! if constructor.valid?
-      render json: constructor ? constructor : { msg: "none" }
+      render json: constructor ? constructor : { message: "Invalide Constructor" }
     end
 
     def update
@@ -25,7 +25,7 @@ module V1
 
     def destroy
       @constructor.destroy
-      render json: { msg: "Deleted" }
+      render json: { message: "Constructor was deleted" }
     end
 
     protected

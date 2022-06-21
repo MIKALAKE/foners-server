@@ -14,7 +14,7 @@ module V1
     def create
       sponsor = Sponsor.new(sponsor_params)
       sponsor.save! if sponsor.valid?
-      render json: sponsor ? sponsor : { msg: "none" }
+      render json: sponsor ? sponsor : { message: "Invalide Sponsor" }
     end
 
     def update
@@ -24,7 +24,7 @@ module V1
 
     def destroy
       @sponsor.destroy
-      render json: { msg: "Deleted" }
+      render json: { message: "Sponsor was deleted" }
     end
 
     protected

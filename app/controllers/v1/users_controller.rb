@@ -15,7 +15,7 @@ module V1
     def create
       user = User.new(user_params)
       user.save! if user.valid?
-      render json: user ? user : { msg: "none" }
+      render json: user ? user : { message: "Invalide User" }
     end
 
     def update
@@ -25,7 +25,7 @@ module V1
 
     def destroy
       @user.destroy
-      render json: { msg: "Deleted" }
+      render json: { message: "User was deleted" }
     end
 
     protected

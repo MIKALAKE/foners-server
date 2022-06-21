@@ -14,7 +14,7 @@ module V1
     def create
       event = Event.new(event_params)
       event.save! if event.valid?
-      render json: event ? event : { msg: "none" }
+      render json: event ? event : { message: "Invalide Event" }
     end
 
     def update
@@ -24,7 +24,7 @@ module V1
 
     def destroy
       @event.destroy
-      render json: { msg: "Deleted" }
+      render json: { message: "Event was deleted" }
     end
 
     protected
