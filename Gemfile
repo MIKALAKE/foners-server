@@ -18,4 +18,5 @@ end
 
 group :development do
   gem "annotate"
+  gem "rack-cors"
 end
