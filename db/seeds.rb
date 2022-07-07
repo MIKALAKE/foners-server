@@ -8,9 +8,9 @@
 
 user = User.create({ first_name: "Paul", last_name: "Pop", avatar_url: "https://upload.wikimedia.org/wikipedia/commons/6/62/CEVA_Logistics_New_Logo.png", email: "paulpop122@gmail.com", admin: true, gender: "male" })
 
-ferrari = Constructor.create({ name: "Ferrari", description: "Lorem Ipsum", logo_url: "https://i.imgur.com/rx2S6SW.jpeg", cover_url: "https://i.imgur.com/rx2S6SW.jpeg", first_apparence: 1970, origins: "Italy", titles: 30, points: 245 })
+ferrari = Constructor.create({ name: "Ferrari", description: "Lorem Ipsum", logo_url: "https://www.pngegg.com/en/search?q=scuderia+Ferrari", cover_url: "https://i.imgur.com/rx2S6SW.jpeg", first_apparence: 1970, origins: "Italy", titles: 30, points: 245 })
 
-redbull = Constructor.create({ name: "Red Bull Racing", description: "Lorem Ipsum", logo_url: "https://i.imgur.com/rx2S6SW.jpeg", first_apparence: 2000, origins: "Austria", titles: 10, points: 245 })
+redbull = Constructor.create({ name: "Red Bull Racing", description: "Lorem Ipsum", logo_url: "https://brandlogos.net/wp-content/uploads/2022/05/red_bull_racing-logo-brandlogos.net_.png", first_apparence: 2000, origins: "Austria", titles: 10, points: 245 })
 
 drivers = Driver.create([
   { first_name: "Charles", last_name: "Leclerc", avatar_url: "https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png", description: "Lorem Ipsum", race_number: 16, nickname: "LEC", constructor_id: ferrari.id, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
