@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_145451) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "points"
-    t.string "car"
+    t.string "car_url"
   end
 
   create_table "drivers", force: :cascade do |t|
