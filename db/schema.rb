@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_070051) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_07_074100) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_070051) do
     t.integer "titles"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "points"
   end
 
   create_table "drivers", force: :cascade do |t|
@@ -39,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_070051) do
     t.integer "height"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "points"
     t.index ["constructor_id"], name: "index_drivers_on_constructor_id"
   end
 
