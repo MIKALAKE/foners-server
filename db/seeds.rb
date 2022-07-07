@@ -13,10 +13,10 @@ ferrari = Constructor.create({ name: "Ferrari", description: "Lorem Ipsum", logo
 redbull = Constructor.create({ name: "Red Bull Racing", description: "Lorem Ipsum", logo_url: "https://i.imgur.com/rx2S6SW.jpeg", first_apparence: 2000, origins: "Austria", titles: 10, points: 245 })
 
 drivers = Driver.create([
-  { first_name: "Charles", last_name: "Leclerc", avatar_url: "https://i.imgur.com/rx2S6SW.jpeg", description: "Lorem Ipsum", race_number: 16, nickname: "LEC", constructor_id: ferrari.id, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
-  { first_name: "Carlos", last_name: "Sainz", avatar_url: "https://i.imgur.com/rx2S6SW.jpeg", description: "Lorem Ipsum", race_number: 55, nickname: "SAI", constructor_id: ferrari.id, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
-  { first_name: "Max", last_name: "Verstappen", avatar_url: "https://i.imgur.com/rx2S6SW.jpeg", description: "Lorem Ipsum", race_number: 1, nickname: "VER", constructor_id: 1, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
-  { first_name: "Sergio", last_name: "Perez", avatar_url: "https://i.imgur.com/rx2S6SW.jpeg", description: "Lorem Ipsum", race_number: 11, nickname: "PER", constructor_id: 1, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
+  { first_name: "Charles", last_name: "Leclerc", avatar_url: "https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png", description: "Lorem Ipsum", race_number: 16, nickname: "LEC", constructor_id: ferrari.id, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
+  { first_name: "Carlos", last_name: "Sainz", avatar_url: "https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png", description: "Lorem Ipsum", race_number: 55, nickname: "SAI", constructor_id: ferrari.id, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
+  { first_name: "Max", last_name: "Verstappen", avatar_url: "https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png", description: "Lorem Ipsum", race_number: 1, nickname: "VER", constructor_id: 1, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
+  { first_name: "Sergio", last_name: "Perez", avatar_url: "https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png", description: "Lorem Ipsum", race_number: 11, nickname: "PER", constructor_id: 1, birth_date: "16.10.1997", nationality: "Monegasque", height: 180, points: 100 },
 
 ])
 
