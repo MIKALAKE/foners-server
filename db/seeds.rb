@@ -27,3 +27,9 @@ sponsors = Sponsor.create([
   { constructor_id: 1, name: "Oracle", logo_url: "https://i.imgur.com/rx2S6SW.jpeg" },
 
 ])
+
+events = Event.create([
+  { name: "FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2022", city: "Spielberg", date: "10.7.2022", cover_url: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Austria.png", country: "Austria" },
+  { name: "FORMULA 1 LENOVO GRAND PRIX DE FRANCE 2022", city: "Le Castellet", date: "22.7.2022", cover_url: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/France%20carbon.png.transform/3col/image.png", country: "France" },
+  { name: "FORMULA 1 ARAMCO MAGYAR NAGYDÍJ 2022", city: "Budapest", date: "29.7.2022", cover_url: "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Track%20icons%204x3/Hungar%20carbon.png.transform/3col/image.png", country: "Hungary" },
+])
