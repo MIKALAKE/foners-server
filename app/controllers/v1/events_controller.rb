@@ -8,6 +8,7 @@ module V1
     end
 
     def show
+      @event = Event.where("date > ?", Time.now).order("date ASC").first
       render json: @event
     end
 
