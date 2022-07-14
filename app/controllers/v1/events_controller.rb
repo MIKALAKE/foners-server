@@ -1,6 +1,6 @@
 module V1
   class EventsController < ApiController
-    before_action :find_event, only: [:show, :update, :destroy]
+    before_action :find_event, only: [:update, :destroy]
 
     def index
       events = Event.all
@@ -8,8 +8,8 @@ module V1
     end
 
     def show
-      @event = Event.where("date > ?", Time.now).order("date ASC").first
-      render json: @event
+      event = Event.where("date > ?", Time.now).order("date ASC").first
+      render json: event
     end
 
     def create
