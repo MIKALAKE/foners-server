@@ -20,5 +20,5 @@
 class Sponsor < ApplicationRecord
   validates :name, presence: true
 
-  belongs_to :constructor
+  belongs_to :constructor, optional: true
 end

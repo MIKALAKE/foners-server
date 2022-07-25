@@ -27,7 +27,7 @@
 class Driver < ApplicationRecord
   validates :first_name, :last_name, :description, :nickname, presence: true
 
-  belongs_to :constructor
+  belongs_to :constructor, optional: true
 
   def full_name
     "#{first_name} #{last_name}"

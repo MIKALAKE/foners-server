@@ -31,7 +31,7 @@ module V1
     protected
 
     def constructor_params
-      params.permit(:cover_url, :description, :first_apparence, :logo_url, :name, :origins, :titles)
+      params.permit(:cover_url, :description, :first_apparence, :logo_url, :name, :origins, :titles, :points, :car_url)
     end
 
     def find_constructor

@@ -16,6 +16,6 @@
 class Constructor < ApplicationRecord
   validates :name, :description, presence: true
 
-  has_many :drivers
-  has_many :sponsors
+  has_many :drivers, dependent: :nullify
+  has_many :sponsors, dependent: :nullify
 end
