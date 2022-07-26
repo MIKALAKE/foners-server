@@ -27,6 +27,8 @@
 class Driver < ApplicationRecord
   validates :first_name, :last_name, :description, :nickname, presence: true
 
+  scope :by_search, ->(search) { where("nickname ILIKE ? ", "%#{search}%") }
+
   belongs_to :constructor, optional: true
 
   def full_name

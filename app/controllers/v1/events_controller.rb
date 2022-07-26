@@ -3,7 +3,8 @@ module V1
     before_action :find_event, only: [:update, :destroy]
 
     def index
-      events = Event.all
+      search_params = params[:search]
+      events = Event.by_search(search_params)
       render json: events
     end
 

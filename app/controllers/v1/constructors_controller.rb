@@ -3,7 +3,8 @@ module V1
     before_action :find_constructor, only: [:show, :update, :destroy]
 
     def index
-      constructors = Constructor.all
+      search_params = params[:search]
+      constructors = Constructor.by_search(search_params)
       render json: constructors
     end
 
