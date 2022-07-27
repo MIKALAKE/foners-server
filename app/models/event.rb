@@ -14,4 +14,6 @@
 #
 class Event < ApplicationRecord
   validates :city, :country, :date, :name, presence: true
+
+  scope :by_search, ->(search) { where("name ILIKE ? OR country ILIKE ? ", "%#{search}%", "%#{search}%") }
 end

@@ -3,7 +3,8 @@ module V1
     before_action :find_constructor, only: [:show, :update, :destroy]
 
     def index
-      constructors = Constructor.all
+      search_params = params[:search]
+      constructors = Constructor.by_search(search_params)
       render json: constructors
     end
 
@@ -31,7 +32,7 @@ module V1
     protected
 
     def constructor_params
-      params.permit(:cover_url, :description, :first_apparence, :logo_url, :name, :origins, :titles)
+      params.permit(:cover_url, :description, :first_apparence, :logo_url, :name, :origins, :titles, :points, :car_url)
     end
 
     def find_constructor

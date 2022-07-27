@@ -3,7 +3,8 @@ module V1
     before_action :find_driver, only: [:show, :update, :destroy]
 
     def index
-      drivers = Driver.all
+      search_params = params[:search]
+      drivers = Driver.by_search(search_params)
       render json: drivers
     end
 
@@ -30,7 +31,7 @@ module V1
     protected
 
     def driver_params
-      params.permit(:first_name, :avatar_url, :birth_date, :height, :last_name, :nationality, :nickname, :race_number, :constructor_id)
+      params.permit(:first_name, :avatar_url, :birth_date, :height, :last_name, :nationality, :nickname, :race_number, :points, :description, :constructor_id)
     end
 
     def find_driver
