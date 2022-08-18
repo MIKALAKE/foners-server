@@ -1,5 +1,6 @@
 module V1
   class SponsorsController < ApiController
+    skip_before_action :authenticate_v1_user!, only: [:index, :show]
     before_action :find_sponsor, only: [:show, :update, :destroy]
 
     def index

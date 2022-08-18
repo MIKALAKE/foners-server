@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-user = User.create({ first_name: "Paul", last_name: "Pop", avatar_url: "https://upload.wikimedia.org/wikipedia/commons/6/62/CEVA_Logistics_New_Logo.png", email: "paulpop122@gmail.com", admin: true, gender: "male" })
+# user = User.create({ first_name: "Paul", last_name: "Pop", avatar_url: "https://upload.wikimedia.org/wikipedia/commons/6/62/CEVA_Logistics_New_Logo.png", email: "paulpop122@gmail.com", admin: true, gender: "male" })
 
 ferrari = Constructor.create({ name: "Ferrari", description: "Lorem Ipsum", logo_url: "https://www.formula1.com/content/dam/fom-website/teams/2022/ferrari-logo.png.transform/2col-retina/image.png", cover_url: "https://www.formula1.com/content/fom-website/en/teams/Ferrari/_jcr_content/logo.img.jpg/1521797474166.jpg", first_apparence: 1970, origins: "Italy", titles: 30, points: 245, car_url: "https://www.formula1.com/content/dam/fom-website/teams/2022/ferrari.png.transform/6col-retina/image.png" })
 

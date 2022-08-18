@@ -1,5 +1,6 @@
 module V1
   class EventsController < ApiController
+    skip_before_action :authenticate_v1_user!, only: [:index, :show]
     before_action :find_event, only: [:update, :destroy]
 
     def index
@@ -32,7 +33,7 @@ module V1
     protected
 
     def event_params
-      params.permit(:city, :country, :cover_url, :date, :description, :name)
+      params.permit(:name, :city, :country, :cover_url, :date, :description)
     end
 
     def find_event

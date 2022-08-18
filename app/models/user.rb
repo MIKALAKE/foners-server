@@ -12,6 +12,11 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
+  # Include default devise modules.
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable,
+         :confirmable
+  include DeviseTokenAuth::Concerns::User
   validates :first_name, :last_name, :email, presence: true
 
   def full_name
