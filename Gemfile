@@ -8,6 +8,7 @@ gem "bootsnap", require: false
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.3"
+gem "devise_token_auth", ">= 1.2.0", git: "https://github.com/RaziAhmad123/devise_token_auth"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 group :development, :test do
@@ -20,4 +21,5 @@ end
 group :development do
   gem "annotate"
   gem "rack-cors"
+  gem "letter_opener"
 end
